@@ -270,5 +270,5 @@ commands:
 - az_acr_task_timer_remove
 - az_acr_task_timer_update
 metadata:
-  ms.date: 10/28/2025
+  ms.date: 03/05/2026
   description: Manage timer triggers for a task.

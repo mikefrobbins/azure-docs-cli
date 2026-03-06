@@ -470,6 +470,7 @@ directCommands:
                              [--name]
                              [--requirement-type {All, Any}]
                              [--tags]
+                             [--telemetry-enabled {false, true}]
                              [--yes]
   examples:
   - summary: |-
@@ -487,6 +488,12 @@ directCommands:
   - summary: |-
       Set a feature flag with name "Beta" and custom key ".appconfig.featureflag/MyApp1:Beta" with tags "tag1=value1" and "tag2=value2".
     syntax: az appconfig feature set -n MyAppConfiguration --feature Beta --key .appconfig.featureflag/MyApp1:Beta --tags tag1=value1 tag2=value2
+  - summary: |-
+      Set a feature flag with telemetry enabled.
+    syntax: az appconfig feature set -n MyAppConfiguration --feature color --telemetry-enabled
+  - summary: |-
+      Disable telemetry on a feature flag.
+    syntax: az appconfig feature set -n MyAppConfiguration --feature color --telemetry-enabled false
   optionalParameters:
   - name: --auth-mode
     defaultValue: key
@@ -521,6 +528,10 @@ directCommands:
   - name: --tags
     summary: |-
       Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.
+  - name: --telemetry-enabled
+    acceptedValues: false, true
+    summary: |-
+      Enable or disable telemetry for the feature flag.
   - name: --yes -y
     defaultValue: "False"
     summary: |-
@@ -733,5 +744,5 @@ commands:
 - az_appconfig_feature_show
 - az_appconfig_feature_unlock
 metadata:
-  ms.date: 07/24/2025
+  ms.date: 03/05/2026
   description: Manage feature flags stored in an App Configuration store.

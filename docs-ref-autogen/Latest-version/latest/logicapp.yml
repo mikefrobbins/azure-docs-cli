@@ -27,6 +27,7 @@ directCommands:
                        [--disable-app-insights {false, true}]
                        [--docker-registry-server-password]
                        [--docker-registry-server-user]
+                       [--domain-name-scope {NoReuse, ResourceGroupReuse, SubscriptionReuse, TenantReuse}]
                        [--functions-version {4}]
                        [--https-only {false, true}]
                        [--plan]
@@ -36,6 +37,9 @@ directCommands:
   - summary: |-
       Create a basic logic app.
     syntax: az logicapp create -g myRG --subscription mySubscription -p MyPlan -n myLogicApp -s myStorageAccount
+  - summary: |-
+      Create a logic app with a unique domain name scope.
+    syntax: az logicapp create -g myRG --subscription mySubscription -p MyPlan -n myLogicApp -s myStorageAccount --domain-name-scope TenantReuse
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -79,6 +83,10 @@ directCommands:
   - name: --docker-registry-server-user -d
     summary: |-
       The container registry server username.
+  - name: --domain-name-scope
+    acceptedValues: NoReuse, ResourceGroupReuse, SubscriptionReuse, TenantReuse
+    summary: |-
+      Specify the scope of uniqueness for the default hostname during resource creation.
   - name: --functions-version -v
     defaultValue: "4"
     acceptedValues: "4"

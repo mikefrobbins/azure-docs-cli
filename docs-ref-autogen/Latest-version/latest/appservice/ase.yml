@@ -651,5 +651,5 @@ commands:
 - az_appservice_ase_update
 - az_appservice_ase_upgrade
 metadata:
-  ms.date: 02/02/2026
+  ms.date: 03/03/2026
   description: Manage App Service Environments.

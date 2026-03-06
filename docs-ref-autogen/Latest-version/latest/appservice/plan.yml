@@ -617,7 +617,6 @@ directCommands:
     acceptedValues: false, true
     summary: |-
       Enable or disable automatic scaling. Set to "true" to enable elastic scale for this plan, or "false" to disable elastic scale for this plan. The SKU must be a Premium V2 SKU (P1V2, P2V2, P3V2) or a Premium V3 SKU (P1V3, P2V3, P3V3).
-    isPreview: true
   - name: --force-string
     defaultValue: "False"
     summary: |-
@@ -634,7 +633,6 @@ directCommands:
   - name: --max-elastic-worker-count -m
     summary: |-
       Maximum number of instances that the plan can scale out to. The plan must be an elastic scale plan.
-    isPreview: true
   - name: --name -n
     summary: |-
       The name of the app service plan.

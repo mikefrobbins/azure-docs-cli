@@ -405,5 +405,5 @@ commands:
 - az_functionapp_config_access-restriction_set
 - az_functionapp_config_access-restriction_show
 metadata:
-  ms.date: 02/02/2026
+  ms.date: 03/03/2026
   description: Methods that show, set, add, and remove access restrictions on a functionapp.
